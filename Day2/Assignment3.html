@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            table,td{
+                border: 1px solid black;
+                }
+    </style>
+</head>
+<body>
+    <script>
+        function tableCreation()
+{
+    var num_rows = prompt("Enter the Number of rows");
+    var num_cols = prompt("Enter the number of Columns");
+    var table = document.getElementById("myTable");
+   
+    for(i=0;i<num_rows;i++)
+    {
+       var row= table.insertRow(i);
+       var j;
+
+       for(j=0;j<num_cols;j++)
+       {
+           var x= row.insertCell(j);
+           x.innerHTML= "row"+" "+"col"+j;
+       } 
+    }
+}
+    window.onload= tableCreation;
+</script>
+</head>
+
+<body>
+        
+    <table id="myTable"></table>
+</script>
+</body>
+</html>

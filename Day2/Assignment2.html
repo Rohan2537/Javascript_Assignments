@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+            for(i=0;i<3;i++){
+                display="";
+             invalue = prompt("Please enter a value between 1-30: " );
+             if(isNaN(invalue)){
+                 alert("Enter a number");
+                 i--;
+             }
+             else if(invalue<1 || invalue>30){
+                 alert("Enter a value between 1-30");
+             }
+             else{
+            printstar();
+            promptbox();
+            }
+         }
+            function printstar()
+            {
+                while(invalue != 0)
+                {
+                    if(invalue=="1")
+                    {
+                        display=display+"*<br>"
+                        invalue--;
+                    }
+                    else{
+                        display=display+"*";
+                        invalue--;
+                    }
+                }
+            }
+            function promptbox(){
+            if (invalue == null )
+             {
+            display = "Please enter the values";
+            } 
+            else if ( invalue> 0 || invalue<30) 
+            {
+            document.write(display);
+            }
+  
+        }
+    </script>
+    <p id="displayvalue"></p>
+</body>
+</html>
